@@ -1,0 +1,10 @@
+{
+    "servers": [
+        {
+            "name":"Economy",
+            "ip":"localhost",
+            "port":25565,
+            "simpleOrfullQuery": true
+        }
+    ]
+}

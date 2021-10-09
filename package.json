@@ -1,0 +1,16 @@
+{
+  "name": "minecraft-server-info",
+  "version": "1.0.0",
+  "description": "a package,that uses minecraft-server-util to get informations about multiple servers from 1 config file.",
+  "main": "index.js",
+  "dependencies": {
+    "ansi-styles": "^5.2.0",
+    "minecraft-server-util": "^3.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nyedu",
+  "license": "MIT"
+}
