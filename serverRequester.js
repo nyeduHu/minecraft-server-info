@@ -2,7 +2,7 @@ const util = require("minecraft-server-util")
 const config = require("./config.json")
 const fs = require("fs");
 
-const res = [];
+let res = {lastUpdated: "idkwhen", servers: []};
 
 exports.pingServers = async () => {
     for (let i = 0; i < config.servers.length; i++) {
@@ -22,7 +22,7 @@ exports.pingServers = async () => {
                         description: response.description.descriptionText,
                         ping: response.roundTripLatency
                     }
-                    res.push(responseObject)
+                    res.servers.push(responseObject)
                 })
                 .catch((error) => {
                     console.error(error);
@@ -43,14 +43,14 @@ exports.pingServers = async () => {
                         description: response.description.descriptionText,
                         ping: response.roundTripLatency
                     }
-                    res.push(responseObject)
+                    res.servers.push(responseObject)
                 })
                 .catch((error) => {
                     console.error(error);
                 });
         }
     }
-
+    res.lastUpdated = new Date();
     //Saving the results
     fs.writeFile(__dirname+"/servers.json", JSON.stringify(res), (err) => {
         console.log(err);

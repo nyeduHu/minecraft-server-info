@@ -75,5 +75,5 @@ Your output is inside `servers.json`.
 
 Example:
 ```json
-[{"serverName":"Economy","host":"localhost","port":25565,"serverType":"SMP","version":"1.16.5","onlinePlayers":1,"maxPlayers":20,"playersString":"1/20","players":["nyedu"],"description":"","ping":15}]
+{"lastUpdated":"2021-10-09T18:48:32.745Z","servers":[{"serverName":"Economy","host":"localhost","port":25565,"serverType":"SMP","version":"1.16.5","onlinePlayers":0,"maxPlayers":20,"playersString":"0/20","players":[],"description":"","ping":11}]}
 ```
